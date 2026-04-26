@@ -5,8 +5,6 @@ title: Magpie User Guide
 
 # Magpie User Guide
 
-*Permissive Annotation Extension*
-
 Magpie is a screenshot annotation tool built for technical writers. This guide covers everything you need to get started and make the most of the app.
 
 ---
