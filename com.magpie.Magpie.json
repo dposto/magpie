@@ -1,0 +1,49 @@
+{
+    "app-id": "com.magpie.Magpie",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "6.9",
+    "sdk": "org.kde.Sdk",
+    "base": "com.riverbankcomputing.PyQt.BaseApp",
+    "base-version": "6.9",
+    "command": "magpie",
+    "cleanup-commands": [
+        "/app/cleanup-BaseApp.sh"
+    ],
+    "build-options": {
+        "env": {
+            "BASEAPP_REMOVE_WEBENGINE": "1"
+        }
+    },
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--filesystem=home",
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=org.freedesktop.portal.Desktop"
+    ],
+    "modules": [
+        "python3-dependencies.json",
+        {
+            "name": "magpie",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -Dm755 Magpie.py /app/bin/Magpie.py",
+                "install -Dm755 magpie-launcher.sh /app/bin/magpie",
+                "install -Dm644 com.magpie.Magpie.desktop /app/share/applications/com.magpie.Magpie.desktop",
+                "install -Dm644 com.magpie.Magpie.metainfo.xml /app/share/metainfo/com.magpie.Magpie.metainfo.xml",
+                "mkdir -p /app/bin/icons && cp icons/*.svg icons/*.png /app/bin/icons/",
+                "install -Dm644 icons/com.magpie.Magpie.png /app/share/icons/hicolor/512x512/apps/com.magpie.Magpie.png"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/dposto/magpie.git",
+                    "tag": "v1.0.0"
+                }
+            ]
+        }
+    ]
+}

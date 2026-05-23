@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.magpie.Magpie</id>
+
+  <name>Magpie</name>
+  <summary>Screenshot annotation tool for technical writers</summary>
+
+  <developer id="com.magpie">
+    <name>David Posto</name>
+  </developer>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <url type="homepage">https://github.com/dposto/magpie</url>
+  <url type="bugtracker">https://github.com/dposto/magpie/issues</url>
+
+  <description>
+    <p>
+      Magpie is a screenshot annotation tool
+      designed for technical writers and documentation workflows. It works as
+      a natural extension of your desktop — capture or open a screenshot,
+      annotate it with arrows, boxes, text, step markers, and highlights,
+      then save or publish directly to your server.
+    </p>
+    <p>Features include:</p>
+    <ul>
+      <li>Arrow, rectangle, oval, line, freehand, and text annotation tools</li>
+      <li>Numbered step markers for procedural documentation</li>
+      <li>Color and Light adjustment tool</li>
+      <li>Transform tool with rotate, flip, and resize</li>
+      <li>Crop, remove whitespace, and pixelate regions</li>
+      <li>Customizable color palette with eyedropper</li>
+      <li>FTP, FTPS, and SFTP publishing with saved destinations</li>
+      <li>System, Light, and Dark theme support</li>
+      <li>Pixel grid overlay for precise editing</li>
+    </ul>
+    <p>
+      Magpie is built for speed and simplicity. Open your screenshot, add
+      your annotations, and move on.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.magpie.Magpie.desktop</launchable>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#4a90d9</color>
+    <color type="primary" scheme_preference="dark">#1c3a5e</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Annotating a screenshot with arrows and step markers</caption>
+      <image>https://raw.githubusercontent.com/dposto/magpie/main/screenshots/main-window.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <releases>
+    <release version="1.0.0" date="2026-04-26">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <categories>
+    <category>Graphics</category>
+    <category>2DGraphics</category>
+    <category>RasterGraphics</category>
+  </categories>
+
+  <keywords>
+    <keyword>screenshot</keyword>
+    <keyword>annotation</keyword>
+    <keyword>image</keyword>
+    <keyword>editor</keyword>
+    <keyword>documentation</keyword>
+    <keyword>technical writing</keyword>
+  </keywords>
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <requires>
+    <display_length compare="ge">768</display_length>
+  </requires>
+</component>

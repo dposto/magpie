@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Magpie
+GenericName=Image Annotation Tool
+Comment=Screenshot annotation tool for technical writers
+Exec=magpie %f
+Icon=com.magpie.Magpie
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+Keywords=screenshot;annotation;image;editor;documentation;
+MimeType=image/png;image/jpeg;image/gif;image/bmp;image/webp;image/tiff;image/svg+xml;
+StartupNotify=true
+StartupWMClass=magpie

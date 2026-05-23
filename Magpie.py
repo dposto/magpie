@@ -12159,12 +12159,12 @@ Use the Upload dropdown to publish via FTP, FTPS, or SFTP if configured.
 
 <p style="font-size: 13px;">Magpie</p>
 <p>Copyright &copy; 2025-2026 David Posto<br/>
-License: MIT License</p>
+License: GNU General Public License v3.0 (GPL-3.0)</p>
 
 <p style="padding: 10px; margin: 10px 0; font-family: monospace; font-size: 11px;">
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &ldquo;Software&rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:<br/><br/>
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.<br/><br/>
-THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.<br/><br/>
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.<br/><br/>
+You should have received a copy of the GNU General Public License along with this program. If not, see <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.
 </p>
 
 <hr/>
@@ -12337,7 +12337,6 @@ Vectors and icons by <a href="https://www.svgrepo.com">SVG Repo</a>
         # App info text
         info_text = f"""<div style="text-align: center;">
 <h2 style="margin-bottom: 5px;">Magpie</h2>
-<p style="color: #666; margin-top: 0;">Permissive Annotation Extension</p>
 <p style="color: #666; margin-top: 0;">Version {APP_VERSION}</p>
 </div>
 
@@ -12357,7 +12356,6 @@ Vectors and icons by <a href="https://www.svgrepo.com">SVG Repo</a>
 </ul>
 
 <p style="color: #666; font-size: 11px; margin-top: 20px;">
-A sudo sketchy project by David Posto.<br/><br/>
 See Help → Keyboard Shortcuts for shortcut reference.<br/>
 See Help → Licenses for third-party license information.
 </p>
