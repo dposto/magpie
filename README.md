@@ -1,43 +1,62 @@
-# magpie
+# Magpie
 
-A screenshot annotation tool geared towards technical writers. Crop, annotate, redact, and publish — without the overhead of a full image editor.
-
-A [sudo sketchy](https://github.com/dposto) project by David Posto.
+A lightweight screenshot annotation tool for technical writers, built with PyQt6.
 
 ---
 
-### Features
+## Features
 
-- Shape tools: Rectangle, Oval, Line, Arrow (with Bézier curve control points)
+- Shape tools: Rectangle, Oval, Line, Arrow (with Bezier curve control points)
 - Annotation tools: Text, Step Marker, Highlight (Pen, Rectangle, Spotlight)
 - Freehand drawing: Pen, Brush, Spray Can, Flood Fill, Color Eraser, Eraser
 - Image tools: Crop, Cut Out, Pixelate, Blur, Remove Space, Magnify Inset
 - Adjustments: Color & Light (Brightness, Contrast, Hue, Sharpness), Transform (Rotate, Flip, Resize), Outline
-- Color palette with Primary and Secondary colors and pick-from-canvas eyedropper
-- Full clipboard integration
-- FTP/FTPS/SFTP publishing with saved destinations
-- Dark mode support
+- Customizable color palette with Primary/Secondary colors and eyedropper
+- Full clipboard integration (copy, paste, paste from system clipboard)
+- FTP, FTPS, and SFTP publishing with saved destinations
+- Dark, Light, and System theme support
+- Pixel grid overlay for precise editing
 
-### Requirements
+---
 
-- Python 3.10+
-- PyQt6
-- Pillow
-- NumPy
-- keyring
-- paramiko (optional, for SFTP)
-- qt6-svg (for icon rendering)
+## Install
 
-### Running
+**Flatpak (recommended):**
 
-```
-python Magpie.py
+```bash
+git clone https://github.com/dposto/magpie.git
+cd magpie
+flatpak-builder --user --install --force-clean builddir com.magpie.Magpie.json
+flatpak run com.magpie.Magpie
 ```
 
-The `icons/` folder should be in the same directory as `Magpie.py`.
+**Run directly:**
 
-### License
+```bash
+git clone https://github.com/dposto/magpie.git
+cd magpie
+pip install Pillow numpy paramiko keyring SecretStorage
+python3 Magpie.py
+```
 
-MIT License — see [LICENSE](LICENSE) for details.
+Requires `python3` and `python3-pyqt6`.
 
-Icons sourced from [SVG Repo](https://www.svgrepo.com/) with attribution. See Help → Licenses in the app for full details.
+---
+
+## License
+
+GPL-3.0 — see [LICENSE](LICENSE)
+
+---
+
+## Credits
+
+Built with:
+
+- [PyQt6](https://riverbankcomputing.com/software/pyqt/) — Riverbank Computing
+- [Qt6](https://qt.io/) — The Qt Company
+- [Pillow](https://python-pillow.org/) — Jeffrey A. Clark and contributors
+- [NumPy](https://numpy.org/) — NumPy Developers
+- [Paramiko](https://www.paramiko.org/) — Jeff Forcier and contributors
+
+Icons from [SVG Repo](https://www.svgrepo.com).
