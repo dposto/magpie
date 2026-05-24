@@ -26,7 +26,7 @@ A lightweight screenshot annotation tool for technical writers, built with PyQt6
 ```bash
 git clone https://github.com/dposto/magpie.git
 cd magpie
-flatpak-builder --user --install --force-clean builddir com.magpie.Magpie.json
+flatpak-builder --user --install --force-clean --install-deps-from=flathub builddir com.magpie.Magpie.json
 flatpak run com.magpie.Magpie
 ```
 
@@ -39,7 +39,13 @@ pip install Pillow numpy paramiko keyring SecretStorage
 python3 Magpie.py
 ```
 
-Requires `python3` and `python3-pyqt6`.
+Requires PyQt6:
+
+```
+Arch:          sudo pacman -S python-pyqt6
+Debian/Ubuntu: sudo apt install python3-pyqt6
+pip:           pip install PyQt6
+```
 
 ---
 
