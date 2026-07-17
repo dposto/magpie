@@ -20,9 +20,25 @@ A lightweight screenshot annotation tool for technical writers, built with PyQt6
 ---
 
 ## Install
-
 **Flatpak (recommended):**
 
+Prerequisites — install Flatpak if you don't already have it:
+```bash
+# Debian/Ubuntu
+sudo apt install flatpak flatpak-builder
+# Fedora
+sudo dnf install flatpak flatpak-builder
+# Arch
+sudo pacman -S flatpak flatpak-builder
+```
+(Other distros: see the [official Flatpak setup guide](https://flatpak.org/setup/).)
+
+Add the Flathub remote:
+```bash
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+Build and run — `--install-deps-from=flathub` pulls in the required KDE runtime automatically:
 ```bash
 git clone https://github.com/dposto/magpie.git
 cd magpie
@@ -31,19 +47,17 @@ flatpak run com.magpie.Magpie
 ```
 
 **Run directly:**
-
 ```bash
 git clone https://github.com/dposto/magpie.git
 cd magpie
 pip install Pillow numpy paramiko keyring SecretStorage
 python3 Magpie.py
 ```
-
 Requires PyQt6:
-
 ```
-Arch:          sudo pacman -S python-pyqt6
 Debian/Ubuntu: sudo apt install python3-pyqt6
+Fedora:        sudo dnf install python3-pyqt6
+Arch:          sudo pacman -S python-pyqt6
 pip:           pip install PyQt6
 ```
 
