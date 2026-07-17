@@ -4,6 +4,16 @@ A lightweight screenshot annotation tool for technical writers, built with PyQt6
 
 ---
 
+## Why Magpie
+
+ShareX has a Cut Out feature I relied on heavily for technical documentation — it removes unwanted sections from the middle of an image and cleanly closes the gap, rather than just cropping the edges. ShareX isn't available natively on Linux, and running it through Wine worked inconsistently and broke often, so I set out to build a reliable Linux alternative.
+
+The Cut Out tool was the original challenge, and a genuinely hard one — getting the geometry right for a zigzag, freehand-edged selection took a long stretch of trial and error. Once it worked reliably, I kept adding the standard editing tools a technical writer reaches for day to day, and Magpie grew into a full screenshot annotation application.
+
+![Magpie main window](screenshots/main-window.png)
+
+---
+
 ## Features
 
 - Shape tools: Rectangle, Oval, Line, Arrow (with Bezier curve control points)
@@ -20,9 +30,11 @@ A lightweight screenshot annotation tool for technical writers, built with PyQt6
 ---
 
 ## Install
+
 **Flatpak (recommended):**
 
 Prerequisites — install Flatpak if you don't already have it:
+
 ```bash
 # Debian/Ubuntu
 sudo apt install flatpak flatpak-builder
@@ -31,14 +43,17 @@ sudo dnf install flatpak flatpak-builder
 # Arch
 sudo pacman -S flatpak flatpak-builder
 ```
+
 (Other distros: see the [official Flatpak setup guide](https://flatpak.org/setup/).)
 
 Add the Flathub remote:
+
 ```bash
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 Build and run — `--install-deps-from=flathub` pulls in the required KDE runtime automatically:
+
 ```bash
 git clone https://github.com/dposto/magpie.git
 cd magpie
@@ -47,12 +62,14 @@ flatpak run com.magpie.Magpie
 ```
 
 **Run directly:**
+
 ```bash
 git clone https://github.com/dposto/magpie.git
 cd magpie
 pip install Pillow numpy paramiko keyring SecretStorage
 python3 Magpie.py
 ```
+
 Requires PyQt6:
 ```
 Debian/Ubuntu: sudo apt install python3-pyqt6
@@ -72,7 +89,6 @@ GPL-3.0 — see [LICENSE](LICENSE)
 ## Credits
 
 Built with:
-
 - [PyQt6](https://riverbankcomputing.com/software/pyqt/) — Riverbank Computing
 - [Qt6](https://qt.io/) — The Qt Company
 - [Pillow](https://python-pillow.org/) — Jeffrey A. Clark and contributors
